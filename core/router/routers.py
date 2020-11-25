@@ -15,3 +15,7 @@ class Router:
         @app.route('/success', methods=['GET'])
         def success_data_single_list():
             return base_controller.succes()
+
+        @app.route('/bad-request', methods=['GET'])
+        def bad_request():
+            return base_controller.unprocessable_entity()

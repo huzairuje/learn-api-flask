@@ -11,6 +11,10 @@ def internal_server_error():
     return base_response.internal_server_response(request.method)
 
 
+def unprocessable_entity():
+    return base_response.unprocessable_entity_response(request.method)
+
+
 def succes():
     data = {
         "name": "uje",
