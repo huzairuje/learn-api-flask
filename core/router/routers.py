@@ -11,3 +11,7 @@ class Router:
         @app.route('/internal-server-error', methods=['GET'])
         def internal_server_error():
             return base_controller.internal_server_error()
+
+        @app.route('/success', methods=['GET'])
+        def success_data_single_list():
+            return base_controller.succes()

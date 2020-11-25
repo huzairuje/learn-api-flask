@@ -9,3 +9,29 @@ def home():
 
 def internal_server_error():
     return base.internal_server_response(request.method)
+
+
+def succes():
+    data = {
+        "name": "uje",
+        "age": 27,
+        "address": "Dago"
+    }
+    datas = [{
+        "id": 1,
+        "skill": "golang"
+    },
+        {
+            "id": 2,
+            "skill": "php"
+        },
+        {
+            "id": 3,
+            "skill": "java"
+        },
+        {
+            "id": 4,
+            "skill": "python"
+        }
+    ]
+    return base.success_with_data_list_and_single(data, datas, request.method)

@@ -3,11 +3,7 @@ from flask import Response
 from core.utils import utils
 
 
-def full_custom_response(code: int,
-                         method: str,
-                         message: str,
-                         data: object,
-                         datas: []):
+def full_custom_response(code: int, method: str, message: str, data: object, datas: []):
     response = {
         "meta": {
             "code": code,
