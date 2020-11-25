@@ -1,14 +1,14 @@
 from flask import request
-from core.response import base
+from core.response import base as base_response
 
 
 def home():
     ini_data_object = None
-    return base.full_custom_response(404, request.method, "Not Found", ini_data_object, [])
+    return base_response.full_custom_response(404, request.method, "Not Found", ini_data_object, [])
 
 
 def internal_server_error():
-    return base.internal_server_response(request.method)
+    return base_response.internal_server_response(request.method)
 
 
 def succes():
@@ -34,4 +34,4 @@ def succes():
             "skill": "python"
         }
     ]
-    return base.success_with_data_list_and_single(data, datas, request.method)
+    return base_response.success_with_data_list_and_single(data, datas, request.method)
