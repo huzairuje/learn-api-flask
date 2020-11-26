@@ -40,7 +40,6 @@ def unprocessable_entity_response(http_method: str):
 def success(http_method: str):
     success_processing = "Success Processing Request"
     response = full_custom_response(200, http_method, success_processing, None, [])
-    response = jsonpickle.encode(response, unpicklable=False)
     return response
 
 
